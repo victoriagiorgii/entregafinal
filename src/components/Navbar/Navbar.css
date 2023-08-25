@@ -1,0 +1,23 @@
+
+.navbar-mine{
+    background-color: rgb(136, 135, 135);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: black;
+    border: 20px;
+}
+
+.carrito{
+    font-size: medium;
+    margin: 5px;
+    color: black;
+    font-weight: 600;
+}
+.title-mine{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    color: rgb(165, 102, 91);
+    margin: 20px;
+    margin-top: 30px;
+}
+
