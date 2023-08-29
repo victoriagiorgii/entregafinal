@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import {ItemList} from '../ItemList/index';
 import { Title } from "../Title/index";
-import { getProductos } from "../../mock/data";
 import { useParams } from "react-router-dom";
-import { getProductosCategoria } from "../../mock/data";
+import { getProductos, getProductosCategoria } from "../../mock/data";
 
 
 export const ItemListContainer=()=>{
@@ -20,6 +19,7 @@ export const ItemListContainer=()=>{
             getProductos().then ((res)=>setProductos(res))
             }
     },[categoriaId])
+
 
 
     return(

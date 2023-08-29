@@ -20,7 +20,7 @@ export const ItemDetail=({producto})=>{
     return(
       <div className="container">
         <div className="text-center">
-          <h3> Detalle {producto.titulo}</h3>
+          <h3>Detalle {producto.titulo}</h3>
           <img src={producto.img} alt=''/>
           <p>{producto.descripcion}</p>
           <p>Precio: ${producto.precio}</p>

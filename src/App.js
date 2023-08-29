@@ -7,12 +7,13 @@ import {CartProvider} from "./components/context/CartContext";
 import {Carrito} from "./components/Carrito/Carrito";
 import { collection, getDocs, getFirestore, query } from "firebase/firestore";
 import { useEffect, useState } from 'react';
+import app from './firebase/base';
 
 
  export function App() {
   const [productos, setProduto] = useState([]);
   useEffect(() => {
-    const db = getFirestore();
+    const db = getFirestore(app);
 
     const productoCollection = collection(db, "productos");
 
