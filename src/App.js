@@ -7,6 +7,7 @@ import {CartProvider} from "./components/context/CartContext";
 import {Carrito} from "./components/Carrito/Carrito";
 import { collection, getDocs, getFirestore, query } from "firebase/firestore";
 import { useEffect, useState } from 'react';
+import {Checkout} from "./components/Checkout/compra"
 import app from './firebase/base';
 
 
@@ -49,6 +50,7 @@ import app from './firebase/base';
         <Route path='/categoria/:categoriaId'element={<ItemListContainer/>}/>
         <Route path='/item/:id'element={<ItemDetailContainer/>}/>
         <Route path='/carrito' element={<Carrito/>}/>
+        <Route path="/checkout" element={<Checkout/>}/>
       </Routes>
     </BrowserRouter>
     </CartProvider>

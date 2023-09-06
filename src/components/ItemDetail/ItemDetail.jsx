@@ -7,10 +7,10 @@ export const ItemDetail=({producto})=>{
    const {carrito,agregarAlCarrito}=useContext(CartContext);
    console.log(carrito)
 
-   const[cantidad , setCantidad]=useState(1);
+   const[cantidad , setCantidad]=useState(0);
 
-   const handleRestar=() => {
-      cantidad > 1 && setCantidad (cantidad -1)
+   const handleResta=() => {
+      cantidad > 0 && setCantidad (cantidad -1)
    }
 
    const handleSumar= () =>{
@@ -27,7 +27,7 @@ export const ItemDetail=({producto})=>{
           <p>Stock:{producto.stock}</p>
           <ItemCount 
           cantidad={ cantidad}
-          handleResta={handleRestar}
+          handleResta={handleResta}
           handleSumar={handleSumar}
           handleAgregar={() =>{agregarAlCarrito (producto,cantidad)}}
           />

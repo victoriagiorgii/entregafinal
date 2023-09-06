@@ -11,9 +11,9 @@ export const Carrito = () => {
     }
 
   return (
-    <div className="container">
+    <div className="container ">
       
-         <h1 className="main-title">Carrito</h1>
+         <h1 className="main-title"> Carrito </h1>
 
         {
             carrito.map((producto) => (

@@ -1,8 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { CartContext } from '../context/CartContext';
 import { useForm } from 'react-hook-form';
-import { collection, addDoc } from "firebase/firestore";
-import { db } from '../../firebase/base';
+import { collection, addDoc, getFirestore } from "firebase/firestore";
 
 export const Checkout = () => {
 
@@ -20,6 +19,8 @@ export const Checkout = () => {
             total: precioTotal()
         }
         console.log(pedido);
+        
+        const db = getFirestore();
 
         const pedidosRef = collection(db, "pedidos");
 
@@ -45,7 +46,7 @@ export const Checkout = () => {
         <h1 className="main-title">Finalizar compra</h1>
         <form className="formulario" onSubmit={handleSubmit(comprar)}>
 
-            <input type="text" placeholder="Ingresá tu nombre" {...register("nombre")} />
+            <input type="text"  placeholder="Ingresá tu nombre" {...register("nombre")} />
             <input type="email" placeholder="Ingresá tu e-mail" {...register("email")} />
             <input type="phone" placeholder="Ingresá tu teléfono" {...register("telefono")} />
 

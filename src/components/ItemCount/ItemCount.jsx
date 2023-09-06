@@ -1,12 +1,12 @@
 import React from 'react'
 
-export const ItemCount = ( {cantidad, handleRestar, handleSumar, handleAgregar} ) => {
+export const ItemCount = ( {cantidad, handleResta, handleSumar, handleAgregar} ) => {
 
   return (
     <div>
 
         <div className="item-count">
-            <button onClick={handleRestar}>-</button>
+            <button onClick={handleResta}>-</button>
             <p>{cantidad}</p>
             <button onClick={handleSumar}>+</button>
         </div>

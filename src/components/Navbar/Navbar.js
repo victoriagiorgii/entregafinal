@@ -22,7 +22,7 @@ export const NavBar=()=>{
           </Nav>
         </Navbar.Collapse>
       </Container>
-      <CardWidget/> <h1 className="carrito">0</h1>
+      <CardWidget/> 
     </Navbar>
   );
 }  
